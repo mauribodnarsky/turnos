@@ -1,0 +1,224 @@
+<div class="row">
+	<div class="col-12">
+<div class="row" style="background-color: #2a623d;">
+	<div class="col-md-2 offset-md-5 col-6 offset-3">
+		<img src="https://gnuino.com.ar/~mauri/www/turnos/lacantera/assets/escudocantera.png" class="w-100">
+	</div>
+</div>
+<div class="row" style="background-color: #2a623d;">
+	<div class="col-4 offset-4">
+<button class="btn btn-secondary  my-2 py-2 w-100" style="background-color:rgb(175, 119, 79);" (click)="actualizar()"><i class="bi bi-arrow-counterclockwise" ></i></button>	</div>
+<p class="text-center h6 text-white">{{this.mensaje}}</p>
+</div>
+<div class="row">
+	<div class="col-1" style="background-color:	#638936;"></div>
+	<div class="col-10 table-responsive" style="background-color:#638936;">
+		<table class="table table-striped mt-3 w-100" style="border:2px solid #2a623d">
+			<thead class="thead-inverse text-center bg-success">
+				<tr>
+					<th class="header">Hora/Día</th>
+					<th class="header">LUNES</th>
+					<th class="header">MARTES</th>
+					<th class="header">MIERCOLES</th>
+					<th class="header">JUEVES</th>
+					<th class="header">VIERNES</th>
+					<th class="header">SABADO</th>
+					<th class="header">DOMINGO</th>
+					
+				</tr>
+			</thead>
+			<tbody class="table-light table-hover table-bordered text-center">
+			<tr> 
+					<td class="horas">14</td>
+					<td (click)="verTurno(this.turnos[0],14,'LUNES')"  data-bs-toggle="modal" data-bs-target="#exampleModal" [ngStyle]="{'color':this.turnos[0].estado === 'Disponible' ? 'green' : 'red' }" >{{this.turnos[0].estado}} </td>
+					<td [ngStyle]="{'color':this.turnos[1].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[1],14,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[1].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[2].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[2],14,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal"> {{this.turnos[2].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[3].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[3],14,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[3].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[4].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[4],14,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[4].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[5].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[5],14,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[5].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[6].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[6],14,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[6].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas" >15</td>
+					<td [ngStyle]="{'color':this.turnos[7].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[7],15,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[7].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[8].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[8],15,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[8].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[9].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[9],15,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[9].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[10].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[10],15,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[10].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[11].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[11],15,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[11].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[12].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[12],15,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[12].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[13].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[13],15,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[13].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas" >16</td>
+					<td [ngStyle]="{'color':this.turnos[14].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[14],16,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[14].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[15].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[15],16,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[15].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[16].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[16],16,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[16].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[17].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[17],16,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[17].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[18].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[18],16,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[18].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[19].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[19],16,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[19].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[20].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[20],16,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[20].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas">17</td>
+					<td [ngStyle]="{'color':this.turnos[21].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[21],17,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[21].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[22].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[22],17,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[22].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[23].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[23],17,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[23].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[24].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[24],17,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[24].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[25].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[25],17,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[25].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[26].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[26],17,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[26].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[27].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[27],17,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal">{{this.turnos[27].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas">18</td>
+					<td [ngStyle]="{'color':this.turnos[28].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[28],18,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[28].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[29].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[29],18,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[29].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[30].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[30],18,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[30].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[31].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[31],18,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[31].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[32].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[32],18,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[32].estado}}</td>
+					<td  [ngStyle]="{'color':this.turnos[33].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[33],18,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[33].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[34].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[34],18,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[34].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas">19</td>
+					<td [ngStyle]="{'color':this.turnos[35].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[35],19,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[35].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[36].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[36],19,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[36].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[37].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[37],19,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[37].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[38].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[38],19,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[38].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[39].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[39],19,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[39].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[40].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[40],19,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[40].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[41].estado === 'Disponible' ? 'green' : 'red' }" (click)="verTurno(this.turnos[41],19,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[41].estado}}</td>
+							</tr>
+			<tr>
+					<td class="horas">20</td>
+					<td [ngStyle]="{'color':this.turnos[42].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[42],20,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[42].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[43].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[43],20,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[43].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[44].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[44],20,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[44].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[45].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[45],20,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[45].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[46].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[46],20,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[46].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[47].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[47],20,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[47].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[48].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[48],20,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[48].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas">21</td>
+					<td [ngStyle]="{'color':this.turnos[49].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[49],21,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[49].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[50].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[50],21,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[50].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[51].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[51],21,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[51].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[52].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[52],21,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[52].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[53].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[53],21,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[53].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[54].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[54],21,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[54].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[55].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[55],21,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[55].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas">22</td>
+					<td [ngStyle]="{'color':this.turnos[56].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[56],22,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[56].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[57].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[57],22,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[57].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[58].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[58],22,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[58].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[59].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[59],22,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[59].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[60].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[60],22,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[60].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[61].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[61],22,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[61].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[62].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[62],22,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[62].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas">23</td>
+					<td [ngStyle]="{'color':this.turnos[63].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[63],23,'LUNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[63].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[64].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[64],23,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[64].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[65].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[65],23,'MIERCOLES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[65].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[66].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[66],23,'JUEVES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[66].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[67].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[67],23,'VIERNES')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[67].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[68].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[68],23,'SABADO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[68].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[69].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[69],23,'DOMINGO')" data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[69].estado}}</td>
+			</tr>
+			<tr>
+					<td class="horas">00</td>
+					<td [ngStyle]="{'color':this.turnos[70].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[70],00,'DOMINGO')"  data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[70].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[71].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[71],00,'LUNES')"  data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[71].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[72].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[72],00,'MARTES')" data-bs-toggle="modal" data-bs-target="#exampleModal"  >{{this.turnos[72].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[73].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[73],00,'MIERCOLES')"  data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[73].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[74].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[74],00,'JUEVES')"  data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[74].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[75].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[75],00,'VIERNES')"  data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[75].estado}}</td>
+					<td [ngStyle]="{'color':this.turnos[76].estado === 'Disponible' ? 'green' : 'red' }"  (click)="verTurno(this.turnos[76],00,'SABADO')"  data-bs-toggle="modal" data-bs-target="#exampleModal" >{{this.turnos[76].estado}}</td>
+			</tr>
+		</table>
+	</div>
+		<div class="col-1" style="background-color:	#638936;"></div>
+
+</div>
+
+
+    <!-- Modal -->
+    <div class="modal fade"  *ngIf="ver!=null" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+      <div class="modal-dialog  modal-xl modal-sm modal-lg">
+        <div class="modal-content">
+          <div class="modal-header text-center" style="background-color: #1a472a; color: white;opacity: 0.7; ">
+            <h5 *ngIf="ver.estado=='Disponible'" class="modal-title " id="exampleModalLabel">DAR TURNO: {{this.dia_turno}}, {{this.hora_turno}} : 00 hs</h5>
+            <h5 *ngIf="ver.estado!='Disponible'" class="modal-title " id="exampleModalLabel">DATOS DEL TURNO: {{this.dia_turno}}, {{this.hora_turno}} : 00 hs</h5>
+            <button type="button" class="btn-close" style="background-color:white !important;" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>      
+          <div class="modal-body" style="background-color: #f6f3f3;">
+            <div class="row" *ngIf="ver.estado=='Disponible'">
+            	<div class="col-10 offset-1">
+            		<form #FormTurno="ngForm" (ngSubmit)="alquilar(FormTurno,this.dia_turno,this.hora_turno)" class="form-group" >
+            	
+            	<div class="row">
+            		<div class="col-3 d-flex justify-content-end align-items-center">
+            			<label class="form-control-label">Nombre</label>
+
+            		</div>
+            		<div class="col-7">
+            			<input type="text" #nombre="ngModel" class="w-100 form-control"  [(ngModel)]="turnoalquilado.nombre"  #nombre="ngModel"  name="nombre" required style="float:center;">	
+            		</div>
+            	</div>
+            	<div class="row">
+            		<div class="col-3 d-flex justify-content-end align-items-center">
+            			<label class="form-control-label">Telefono</label>
+            		</div>
+            		<div class="col-7">
+            			<input type="text" #telefono="ngModel" class="form-control"  [(ngModel)]="turnoalquilado.telefono"  name="telefono" required style="float:center;">
+            		</div>
+            	</div>
+
+            	<div class="row">
+            		<div class="col-3 d-flex justify-content-end align-items-center">
+							<label class="form-control-label">Turno Fijo</label>
+						</div>
+						<div class="col-7 d-flex justify-content-start align-items-center">
+							<input type="checkbox" #fijo="ngModel" class="form-check"  [(ngModel)]="turnoalquilado.fijo"  name="fijo" required style="float:center;">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-4 offset-6 d-flex justify-content-end align-items-center">
+							<input type="submit" class="btn btn-success" name="">
+            	
+						</div>
+					</div>
+							</form>
+            	</div>
+			</div>
+          <div class="row" *ngIf="ver.estado=='Ocupado'">
+          	<div class="col-10 offset-1">
+          		<div class="row">
+          			<div class="col-12 ">
+          				<h5>NOMBRE: {{ver.nombre}}</h5>
+          			</div>
+          		</div>
+          		<div class="row">
+          			<div class="col-12">
+          				<h5>TELEFONO: {{ver.telefono}}</h5>
+          			</div>
+          		</div>
+          		<div class="row">
+          			<div class="col-3 offset-9">
+          				<button (click)="desocuparturno(ver.id)" class="btn-danger p-2">DESOCUPAR TURNO</button>
+          			</div>
+          		</div>
+          	</div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      </div>
+    </div>
+
